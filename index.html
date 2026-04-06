@@ -140,6 +140,7 @@ nav{position:fixed;top:4px;left:0;right:0;z-index:100;display:flex;justify-conte
 .contact-col h3{font-family:'Shippori Mincho',serif;font-size:0.92rem;font-weight:400;color:var(--ink);margin-bottom:1rem;}
 .contact-col p{font-size:0.82rem;color:var(--muted);line-height:1.9;}
 .contact-col a{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--anko-mid);text-decoration:none;letter-spacing:0.06em;border-bottom:1px solid rgba(58,28,82,0.2);padding-bottom:1px;}
+.contact-email-link{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--anko-mid);text-decoration:none;letter-spacing:0.06em;border-bottom:1px solid rgba(58,28,82,0.2);padding-bottom:1px;}
 footer{border-top:1px solid var(--line-faint);padding:2.5rem 5rem 2.5rem 6.5rem;display:flex;justify-content:space-between;align-items:center;}
 .footer-left{font-family:'Shippori Mincho',serif;font-size:0.82rem;color:var(--muted);letter-spacing:0.04em;}
 .footer-right{font-family:'DM Mono',monospace;font-size:0.56rem;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;}
@@ -439,11 +440,24 @@ footer{border-top:1px solid var(--line-faint);padding:2.5rem 5rem 2.5rem 6.5rem;
     </div>
     <div class="contact-col">
       <h3>Get in touch</h3>
-      <p><a href="/cdn-cgi/l/email-protection#f881998b8d90918a97b8999693919699d69991"><span class="__cf_email__" data-cfemail="6a130b191f020318052a0b040103040b440b03">[email&#160;protected]</span></a></p>
+      <p id="contact-email-wrap"></p>
     </div>
   </div>
 </section>
 
+<script>
+(function(){
+  var u='yasuhiro',d='ankina.ai';
+  var el=document.getElementById('contact-email-wrap');
+  if(el){
+    var a=document.createElement('a');
+    a.href='mailto:'+u+'@'+d;
+    a.textContent=u+'@'+d;
+    a.className='contact-email-link';
+    el.appendChild(a);
+  }
+})();
+</script>
 <footer>
   <div class="footer-left">© 2026 Ankina Lab</div>
   <div class="footer-right">Independent AI Research · ankina.ai</div>
