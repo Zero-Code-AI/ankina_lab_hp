@@ -183,11 +183,11 @@ export default function Home() {
             <div style={{ marginBottom: "2rem" }}>
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Lab Members", "メンバー")}</div>
               {[
-                { name: "Kinako", role: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false },
+                { name: "Kinako", role: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false, img: "/kinako.jpg" },
                 { name: "Anko", role: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
               ].map(m => (
                 <div key={m.name} style={{ display: "flex", alignItems: "center", gap: "0.7rem", padding: "0.55rem 0.7rem", border: "1px solid var(--line-faint)", background: "rgba(255,255,255,0.5)", marginBottom: "0.5rem" }}>
-                  <div style={{ width: "26px", height: "26px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", background: m.dark ? "var(--anko)" : "var(--fawn-pale)", flexShrink: 0 }}>🐾</div>
+                  <img src={(m as any).img || (m as any).dark ? "/anko.jpg" : "/kinako.jpg"} alt={m.name} style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
                   <div>
                     <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 500, color: "var(--ink)" }}>{m.name}</div>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.54rem", color: "var(--muted)", letterSpacing: "0.06em" }}>{m.role}</div>
@@ -305,7 +305,7 @@ export default function Home() {
       <section style={s.section}>
         <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("06 — Team", "06 — チーム")}</div>
         <div style={{ display: "flex", alignItems: "flex-start", gap: "2.5rem", padding: "2.5rem", border: "1px solid var(--line-dark)", marginBottom: "1.5rem" }}>
-          <div style={{ width: "100px", height: "120px", background: "var(--fawn-pale)", flexShrink: 0, border: "1px solid var(--line-faint)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Shippori Mincho', serif", fontSize: "1.2rem", color: "var(--muted)" }}>YK</div>
+          <img src="/kasai.jpg" alt="Yasuhiro Kasai" style={{ width: "100px", height: "120px", objectFit: "cover", objectPosition: "center top", flexShrink: 0, border: "1px solid var(--line-faint)" }} />
           <div>
             <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", fontWeight: 400, color: "var(--ink)", marginBottom: "0.3rem" }}>Yasuhiro Kasai</h3>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--anko-soft)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "0.75rem" }}>{t("Founder · Independent Researcher", "創設者 · 独立研究者")}</div>
@@ -316,11 +316,11 @@ export default function Home() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
           {[
-            { name: "Kinako", title: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false },
-            { name: "Anko", title: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
+            { name: "Kinako", title: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false, img: "/kinako.jpg" },
+            { name: "Anko", title: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true, img: "/anko.jpg" },
           ].map(m => (
             <div key={m.name} style={{ background: "var(--bg)", display: "flex", alignItems: "center", gap: "1.25rem", padding: "1.5rem 2rem" }}>
-              <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: m.dark ? "var(--anko)" : "var(--fawn-pale)", flexShrink: 0, border: "2px solid var(--fawn-pale)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}>🐾</div>
+              <img src={(m as any).img} alt={m.name} style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover", flexShrink: 0, border: "2px solid var(--fawn-pale)" }} />
               <div>
                 <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.9rem", fontWeight: 400, color: "var(--ink)" }}>{m.name}</div>
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.56rem", color: "var(--muted)", letterSpacing: "0.08em" }}>{m.title}</div>
