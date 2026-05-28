@@ -184,7 +184,7 @@ export default function Home() {
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Lab Members", "メンバー")}</div>
               {[
                 { name: "Kinako", role: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false, img: "/kinako.jpg" },
-                { name: "Anko", role: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
+                { name: "Anko", role: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true, img: "/anko.jpg" },
               ].map(m => (
                 <div key={m.name} style={{ display: "flex", alignItems: "center", gap: "0.7rem", padding: "0.55rem 0.7rem", border: "1px solid var(--line-faint)", background: "rgba(255,255,255,0.5)", marginBottom: "0.5rem" }}>
                   <img src={(m as any).img} alt={m.name} style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
