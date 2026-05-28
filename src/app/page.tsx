@@ -127,12 +127,12 @@ export default function Home() {
               {t("AI should ", "AIは、共に成長する人々を")}
               <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("remember", "")}</em>
               <br />{t("the people it", "")}
-              <br />{t("grows with.", "忘れてはならない。")}
+              <br />{t("grows with.", "")}
             </h1>
             <p style={{ ...s.sub }}>
               {t(
                 "Researching personal AI systems that form lasting relationships with their users — beyond context windows, beyond sessions. Built by one researcher, two dogs, and a lot of late nights.",
-                "コンテキストの制約を超え、セッションをまたいで、ユーザーと持続的な関係を築く個人AIの研究。一人の研究者と二匹の犬が、深夜を重ねながら取り組んでいる。"
+                "コンテキストの制約を超え、セッションをまたいで、ユーザーと持続的な関係を築く個人AIの研究。一人の研究者と二匹の犬が、夜な夜な取り組んでいる。"
               )}
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem", margin: "2.2rem 0" }}>
@@ -140,8 +140,8 @@ export default function Home() {
               <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "var(--fawn)" }} />
             </div>
             <h1 style={{ ...s.h1 }}>
-              {t("Optimized for ", "真実ではなく、ユーザーからの高評価のために")}
-              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("approval", "最適化されている")}</em>
+              {t("Optimized for ", <span style={{fontSize:"0.65em"}}>真実ではなく、ユーザーからの高評価のために最適化されている。</span>)}
+              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("approval", "")}</em>
               {t(",", "")}
               <br />{t("not truth.", "")}
             </h1>
