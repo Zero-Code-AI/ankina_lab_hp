@@ -127,7 +127,7 @@ export default function Home() {
               {t("AI should ", "AIは、共に成長する人々を")}
               <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("remember", "")}</em>
               <br />{t("the people it", "")}
-              <br />{t("grows with.", "")}
+              <br />{t("grows with.", "忘れてはならない。")}
             </h1>
             <p style={{ ...s.sub }}>
               {t(
