@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
 
 interface Props {
@@ -78,10 +79,10 @@ const mdxComponents = {
     <thead style={{ background: "var(--anko)", color: "var(--fawn-pale)" }} {...props} />
   ),
   th: (props: React.ThHTMLAttributes<HTMLTableHeaderCellElement>) => (
-    <th style={{ padding: "0.75rem 1.25rem", textAlign: "left", letterSpacing: "0.1em", textTransform: "uppercase", fontSize: "0.65rem", fontWeight: 500, color: "var(--fawn-light)" }} {...props} />
+    <th style={{ padding: "0.75rem 1.25rem", textAlign: "left" as const, letterSpacing: "0.1em", textTransform: "uppercase" as const, fontSize: "0.65rem", fontWeight: 500, color: "var(--fawn-light)" }} {...props} />
   ),
   td: (props: React.TdHTMLAttributes<HTMLTableDataCellElement>) => (
-    <td style={{ padding: "0.75rem 1.25rem", borderBottom: "1px solid var(--line-faint)", color: "var(--muted)", verticalAlign: "top" }} {...props} />
+    <td style={{ padding: "0.75rem 1.25rem", borderBottom: "1px solid var(--line-faint)", color: "var(--muted)", verticalAlign: "top" as const }} {...props} />
   ),
   tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr style={{ background: "var(--bg)" }} {...props} />
@@ -124,7 +125,11 @@ export default async function BlogPost({ params }: Props) {
         </div>
 
         <div>
-          <MDXRemote source={post.content} components={mdxComponents} />
+          <MDXRemote
+            source={post.content}
+            components={mdxComponents}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          />
         </div>
 
         <div style={{ marginTop: "4rem", paddingTop: "2rem", borderTop: "1px solid var(--line-faint)" }}>
