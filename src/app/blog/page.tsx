@@ -17,139 +17,52 @@ interface Post {
   lang: string;
 }
 
-function getPosts(): Post[] {
-  const contentDir = path.join(process.cwd(), "src/content/blog");
+function getPosts(lang: string): Post[] {
+  const contentDir = path.join(process.cwd(), "src/content/blog", lang);
   if (!fs.existsSync(contentDir)) return [];
   const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md"));
   return files
     .map((file) => {
       const raw = fs.readFileSync(path.join(contentDir, file), "utf-8");
       const { data } = matter(raw);
-      return {
-        slug: file.replace(".md", ""),
-        title: data.title || "",
-        date: data.date || "",
-        excerpt: data.excerpt || "",
-        lang: data.lang || "en",
-      };
+      return { slug: file.replace(".md", ""), title: data.title || "", date: data.date || "", excerpt: data.excerpt || "", lang };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export default function BlogIndex() {
-  const posts = getPosts();
+export default function BlogIndex({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
+  const lang = searchParams?.lang === "ja" ? "ja" : "en";
+  const posts = getPosts(lang);
+  const isJa = lang === "ja";
 
   return (
     <main>
-      <section
-        style={{
-          padding: "10rem 5rem 8rem 6.5rem",
-          maxWidth: "1140px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "'DM Mono', monospace",
-            fontSize: "0.6rem",
-            color: "var(--muted)",
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            marginBottom: "3rem",
-            display: "flex",
-            alignItems: "center",
-            gap: "1rem",
-          }}
-        >
+      <section style={{ padding: "10rem 5rem 8rem 6.5rem", maxWidth: "1140px", margin: "0 auto" }}>
+        <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.22em", textTransform: "uppercase" as const, marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "1rem" }}>
           <div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />
-          Blog — Research Notes
+          {isJa ? "ブログ — 研究ノート" : "Blog — Research Notes"}
         </div>
-
+        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "3rem" }}>
+          {["en", "ja"].map((l) => (
+            <a key={l} href={`/blog?lang=${l}`} style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.1em", padding: "0.2rem 0.6rem", border: "1px solid rgba(58,28,82,0.2)", color: lang === l ? "var(--bg)" : "var(--anko-mid)", background: lang === l ? "var(--anko-mid)" : "transparent", textDecoration: "none" }}>
+              {l === "en" ? "EN" : "日本語"}
+            </a>
+          ))}
+        </div>
         {posts.length === 0 ? (
-          <div
-            style={{
-              border: "1px solid var(--line-dark)",
-              padding: "4rem 3rem",
-              textAlign: "center",
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "'Shippori Mincho', serif",
-                fontSize: "1rem",
-                color: "var(--muted)",
-                lineHeight: 2,
-              }}
-            >
-              First posts coming soon.
-            </p>
-            <p
-              style={{
-                fontFamily: "'DM Mono', monospace",
-                fontSize: "0.65rem",
-                color: "var(--muted)",
-                letterSpacing: "0.1em",
-                marginTop: "1rem",
-              }}
-            >
-              Add .md files to src/content/blog/
-            </p>
+          <div style={{ border: "1px solid var(--line-dark)", padding: "4rem 3rem", textAlign: "center" as const }}>
+            <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", color: "var(--muted)", lineHeight: 2 }}>{isJa ? "近日公開予定" : "First posts coming soon."}</p>
           </div>
         ) : (
-          <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
+          <div style={{ display: "flex", flexDirection: "column" as const, gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
             {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
-                    background: "var(--bg)",
-                    padding: "2.5rem 3rem",
-                    transition: "background 0.2s",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "2rem",
-                  }}
-                >
+              <Link key={post.slug} href={`/blog/${lang}/${post.slug}`} style={{ textDecoration: "none" }}>
+                <div style={{ background: "var(--bg)", padding: "2.5rem 3rem", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "2rem" }}>
                   <div>
-                    <h2
-                      style={{
-                        fontFamily: "'Shippori Mincho', serif",
-                        fontSize: "1.1rem",
-                        fontWeight: 400,
-                        color: "var(--ink)",
-                        marginBottom: "0.75rem",
-                        letterSpacing: "0.02em",
-                      }}
-                    >
-                      {post.title}
-                    </h2>
-                    <p
-                      style={{
-                        fontSize: "0.84rem",
-                        color: "var(--muted)",
-                        lineHeight: 1.85,
-                        maxWidth: "600px",
-                      }}
-                    >
-                      {post.excerpt}
-                    </p>
+                    <h2 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1.1rem", fontWeight: 400, color: "var(--ink)", marginBottom: "0.75rem" }}>{post.title}</h2>
+                    <p style={{ fontSize: "0.84rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "600px" }}>{post.excerpt}</p>
                   </div>
-                  <div
-                    style={{
-                      fontFamily: "'DM Mono', monospace",
-                      fontSize: "0.65rem",
-                      color: "var(--muted)",
-                      letterSpacing: "0.1em",
-                      flexShrink: 0,
-                      paddingTop: "0.2rem",
-                    }}
-                  >
-                    {post.date}
-                  </div>
+                  <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.65rem", color: "var(--muted)", letterSpacing: "0.1em", flexShrink: 0 }}>{post.date}</div>
                 </div>
               </Link>
             ))}
