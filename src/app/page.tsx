@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { useLang } from "@/components/LangContext";
 
 const s = {
@@ -48,6 +49,25 @@ const s = {
 
 export default function Home() {
   const { t, lang } = useLang();
+
+  useEffect(() => {
+    const el = document.getElementById("contact-email-wrap");
+    if (el) {
+      const a = document.createElement("a");
+      const u = "yasuhiro";
+      const d = "ankina.ai";
+      a.href = "mailto:" + u + "@" + d;
+      a.textContent = u + "@" + d;
+      a.style.fontFamily = "'DM Mono', monospace";
+      a.style.fontSize = "0.72rem";
+      a.style.color = "var(--anko-mid)";
+      a.style.textDecoration = "none";
+      a.style.letterSpacing = "0.06em";
+      a.style.borderBottom = "1px solid rgba(58,28,82,0.2)";
+      a.style.paddingBottom = "1px";
+      el.appendChild(a);
+    }
+  }, []);
 
   const researchAreas = [
     {
