@@ -187,7 +187,7 @@ export default function Home() {
                 { name: "Anko", role: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
               ].map(m => (
                 <div key={m.name} style={{ display: "flex", alignItems: "center", gap: "0.7rem", padding: "0.55rem 0.7rem", border: "1px solid var(--line-faint)", background: "rgba(255,255,255,0.5)", marginBottom: "0.5rem" }}>
-                  <img src={(m as any).img || (m as any).dark ? "/anko.jpg" : "/kinako.jpg"} alt={m.name} style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+                  <img src={(m as any).img} alt={m.name} style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
                   <div>
                     <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 500, color: "var(--ink)" }}>{m.name}</div>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.54rem", color: "var(--muted)", letterSpacing: "0.06em" }}>{m.role}</div>
