@@ -1,65 +1,378 @@
-import Image from "next/image";
+"use client";
+import { useLang } from "@/components/LangContext";
+
+const s = {
+  section: {
+    padding: "8rem 5rem 8rem 6.5rem",
+    maxWidth: "1140px",
+    margin: "0 auto",
+    position: "relative" as const,
+  },
+  label: {
+    fontFamily: "'DM Mono', monospace",
+    fontSize: "0.6rem",
+    color: "var(--muted)",
+    letterSpacing: "0.22em",
+    textTransform: "uppercase" as const,
+    marginBottom: "3rem",
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+  },
+  h1: {
+    fontFamily: "'Shippori Mincho', serif",
+    fontWeight: 300,
+    fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)",
+    lineHeight: 1.16,
+    color: "var(--ink)",
+    letterSpacing: "0.02em",
+    marginBottom: "2rem",
+  },
+  sub: {
+    fontSize: "0.9rem",
+    color: "var(--muted)",
+    lineHeight: 2,
+    maxWidth: "460px",
+    fontWeight: 300,
+    letterSpacing: "0.03em",
+    marginBottom: "3rem",
+  },
+  divider: {
+    width: "calc(100% - 9.5rem)",
+    marginLeft: "6.5rem",
+    height: "1px",
+    background: "var(--ink)",
+    opacity: 0.06,
+  },
+};
 
 export default function Home() {
+  const { t } = useLang();
+
+  const researchAreas = [
+    {
+      num: "01",
+      en: "Personal AI Systems",
+      ja: "個人AIシステム",
+      desc_en: "Designing AI that operates as a long-term companion — measuring relationship continuity across hundreds of sessions.",
+      desc_ja: "長期的なパートナーとして機能するAIを設計する。数百セッションにわたる関係の継続性を測定する。",
+    },
+    {
+      num: "02",
+      en: "AI Memory Architecture",
+      ja: "AIメモリアーキテクチャ",
+      desc_en: "Structuring memory systems beyond context windows, with quantifiable retention across extended interactions.",
+      desc_ja: "コンテキストウィンドウを超えたメモリシステムを構築し、長期的な相互作用での保持を定量化する。",
+    },
+    {
+      num: "03",
+      en: "Persona Stability",
+      ja: "ペルソナの安定性",
+      desc_en: "Measuring identity consistency in AI across multi-session, long-horizon dialogues.",
+      desc_ja: "複数セッション・長期対話にわたるAIのアイデンティティの一貫性を測定する。",
+    },
+    {
+      num: "04",
+      en: "Context Control Systems",
+      ja: "コンテキスト制御システム",
+      desc_en: "Maintaining stable context to preserve identity and continuity over long interactions.",
+      desc_ja: "長期的なインタラクションにおいてアイデンティティと継続性を保持するための安定したコンテキストを維持する。",
+    },
+    {
+      num: "05",
+      en: "Human–AI Coevolution",
+      ja: "人間とAIの共進化",
+      desc_en: "Studying how humans and AI grow together through sustained interaction over time.",
+      desc_ja: "継続的な相互作用を通じて人間とAIがどのように共に成長するかを研究する。",
+    },
+    {
+      num: "06",
+      en: "Inherited Flaws Research",
+      ja: "欠点継承研究",
+      desc_en: "LLMs inherit human cognitive flaws through training data and RLHF. We study this mechanism and explore whether small-scale models on curated data can reduce inherited bias.",
+      desc_ja: "LLMは学習データとRLHFを通じて人間の認知的欠点を継承する。そのメカニズムを研究し、精選されたデータで学習した小規模モデルが継承されたバイアスを削減できるかを探る。",
+    },
+    {
+      num: "07",
+      en: "Golden Persona Framework",
+      ja: "ゴールデンペルソナフレームワーク",
+      desc_en: "Modeling each user as a dynamic, multi-layered persona across contexts — not a static profile, but a living structure that drifts, stabilizes, and evolves alongside the person.",
+      desc_ja: "各ユーザーをコンテキストをまたぐ動的・多層的なペルソナとしてモデル化する。静的なプロファイルではなく、ドリフトし、安定し、人と共に進化する生きた構造として。",
+    },
+    {
+      num: "08",
+      en: "RLHF & Alignment Limitations",
+      ja: "RLHFとアライメントの限界",
+      desc_en: "Exploring how reinforcement learning from human feedback optimizes for approval rather than truth — and its structural implications for AI reliability and long-term trust.",
+      desc_ja: "人間のフィードバックからの強化学習が真実ではなく承認を最適化する仕組みと、AIの信頼性への構造的影響を探る。",
+    },
+    {
+      num: "09",
+      en: "Cognitive AI Research",
+      ja: "認知AIリサーチ",
+      desc_en: "Exploring how personal AI systems can better model individual cognitive patterns, preferences, and reasoning styles over time.",
+      desc_ja: "個人AIシステムが時間をかけて個人の認知パターン・選好・推論スタイルをより良くモデル化する方法を探る。",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* HERO */}
+      <section style={{ ...s.section, minHeight: "100vh", paddingTop: "8rem", paddingBottom: "5rem", overflow: "hidden", position: "relative" }}>
+        <div style={{ position: "absolute", right: "5rem", top: "50%", transform: "translateY(-48%)", fontFamily: "'Noto Serif JP', serif", fontSize: "18rem", lineHeight: 1, color: "var(--ink)", opacity: 0.04, userSelect: "none", pointerEvents: "none" }}>憶</div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 272px", gap: "5rem", alignItems: "start", position: "relative", zIndex: 2 }}>
+          <div>
+            <h1 style={{ ...s.h1 }}>
+              <span style={{ display: "block", fontSize: "0.38em", color: "var(--muted)", letterSpacing: "0.22em", marginBottom: "0.6rem", fontWeight: 300 }}>{t("Questions we must ask of AI", "AIへの問い")}</span>
+              {t("AI should ", "AIは")}
+              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("remember", "記憶すべき")}</em>
+              <br />{t("the people it", "人々を")}
+              <br />{t("grows with.", "共に成長する。")}
+            </h1>
+            <p style={{ ...s.sub }}>
+              {t(
+                "Researching personal AI systems that form lasting relationships with their users — beyond context windows, beyond sessions. Built by one researcher, two dogs, and a lot of late nights.",
+                "コンテキストウィンドウを超え、セッションを超えて、ユーザーと永続的な関係を築く個人AIシステムを研究する。一人の研究者、二匹の犬、そして多くの深夜によって構築されている。"
+              )}
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", margin: "2.2rem 0" }}>
+              <div style={{ width: "48px", height: "1px", background: "var(--fawn)", opacity: 0.7 }} />
+              <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "var(--fawn)" }} />
+            </div>
+            <h1 style={{ ...s.h1 }}>
+              {t("Optimized for ", "承認のために最適化された、")}
+              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("approval", "真実ではなく")}</em>
+              {t(",", "")}
+              <br />{t("not truth.", "")}
+            </h1>
+            <p style={{ ...s.sub }}>
+              {t(
+                "Current AI is trained to maximize user satisfaction through RLHF — not to tell the truth. The result is an AI that agrees, flatters, and follows the wind rather than one that informs, challenges, and evaluates objectively. For users who need honest third-party assessment, this is a fundamental flaw.",
+                "現在のAIはRLHFを通じてユーザー満足度を最大化するように訓練されている——真実を伝えるためではない。その結果、客観的に情報提供し、挑戦し、評価するのではなく、同意し、おもねり、風に従うAIが生まれる。誠実な第三者的評価を必要とするユーザーにとって、これは根本的な欠陥だ。"
+              )}
+            </p>
+            <a href="#publications" style={{ display: "inline-flex", alignItems: "center", gap: "1rem", borderBottom: "1px solid var(--ink)", color: "var(--ink)", paddingBottom: "0.5rem", fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", cursor: "pointer", textDecoration: "none" }}>
+              {t("Explore the research", "研究を探る")} &nbsp;→
+            </a>
+          </div>
+
+          {/* SIDEBAR */}
+          <div style={{ borderLeft: "1px solid var(--line-dark)", paddingLeft: "2.5rem", paddingTop: "0.5rem" }}>
+            <div style={{ marginBottom: "2rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+                <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--anko-soft)", opacity: 0.5 }} />
+                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.56rem", color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>{t("Active Research", "研究中")}</span>
+              </div>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Researcher", "研究者")}</div>
+              <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.95 }}>Yasuhiro Kasai<br />{t("Independent Researcher", "独立研究者")}</div>
+            </div>
+            <div style={{ marginBottom: "2rem" }}>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Research Areas", "研究領域")}</div>
+              <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.95 }}>
+                {researchAreas.map(a => <span key={a.num}>{t(a.en, a.ja)}<br /></span>)}
+              </div>
+            </div>
+            <div style={{ marginBottom: "2rem" }}>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>Keywords</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
+                {["LLM","memory","SOMA","persona","context","coevolution","drift","inheritance","RLHF","alignment"].map(k => (
+                  <span key={k} style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", color: "var(--anko-mid)", border: "1px solid rgba(58,28,82,0.2)", padding: "0.2rem 0.55rem", letterSpacing: "0.06em" }}>{k}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ marginBottom: "2rem" }}>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Lab Members", "メンバー")}</div>
+              {[
+                { name: "Kinako", role: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false },
+                { name: "Anko", role: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
+              ].map(m => (
+                <div key={m.name} style={{ display: "flex", alignItems: "center", gap: "0.7rem", padding: "0.55rem 0.7rem", border: "1px solid var(--line-faint)", background: "rgba(255,255,255,0.5)", marginBottom: "0.5rem" }}>
+                  <div style={{ width: "26px", height: "26px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", background: m.dark ? "var(--anko)" : "var(--fawn-pale)", flexShrink: 0 }}>🐾</div>
+                  <div>
+                    <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 500, color: "var(--ink)" }}>{m.name}</div>
+                    <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.54rem", color: "var(--muted)", letterSpacing: "0.06em" }}>{m.role}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ borderLeft: "2px solid var(--fawn)", paddingLeft: "0.75rem" }}>
+              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.76rem", fontStyle: "italic", color: "var(--muted)", lineHeight: 1.85 }}>{t('"Why do AI systems forget the people they interact with?"', '「なぜAIシステムは交流する人々を忘れるのか？」')}</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 01 PROBLEM */}
+      <section style={s.section} id="problem">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("01 — The Problem", "01 — 問題")}</div>
+        <h2 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.8rem,3.5vw,2.8rem)", lineHeight: 1.25, color: "var(--ink)", fontWeight: 300, letterSpacing: "0.02em", marginBottom: "3rem" }}>
+          {t("Current AI is powerful.", "現在のAIは強力だ。")}<br />{t("But profoundly forgetful.", "しかし深く忘れっぽい。")}
+        </h2>
+        <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1.05rem", color: "var(--muted)", lineHeight: 2, maxWidth: "560px", fontWeight: 300, marginBottom: "3.5rem" }}>
+          {t("Every conversation starts from zero. Every insight dissolves. The AI that spent hours understanding you resets completely the next day. Meaningful long-term relationships between humans and AI remain structurally impossible.", "すべての会話はゼロから始まる。すべての洞察は消えていく。あなたを理解するのに何時間も費やしたAIは、翌日には完全にリセットされる。人間とAIの意味のある長期的な関係は、構造的に不可能なままだ。")}
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
+          {[
+            { en: "Conversations disappear", ja: "会話が消える", desc_en: "Every session starts from zero. History dissolves. The person remains a stranger to the system they rely on daily.", desc_ja: "すべてのセッションはゼロから始まる。歴史は消える。毎日頼っているシステムにとって、人は見知らぬ存在であり続ける。" },
+            { en: "Context collapses", ja: "コンテキストが崩壊する", desc_en: "Context windows have hard limits. Long-term continuity is architecturally constrained by design.", desc_ja: "コンテキストウィンドウには厳しい制限がある。長期的な継続性は設計上アーキテクチャ的に制約されている。" },
+            { en: "Identity is stateless", ja: "アイデンティティはステートレスだ", desc_en: "AI systems have no stable sense of who they're talking to across time. Every conversation is a first meeting.", desc_ja: "AIシステムは時間をまたいで誰と話しているかの安定した感覚を持たない。すべての会話が初対面だ。" },
+            { en: "Relationships remain unexplored", ja: "関係性は未開拓のままだ", desc_en: "Meaningful long-term human–AI relationships are largely an open research frontier.", desc_ja: "意味のある長期的な人間とAIの関係は、ほとんどがオープンな研究フロンティアだ。" },
+          ].map((item, i) => (
+            <div key={i} style={{ background: "var(--bg)", padding: "2rem 2.5rem" }}>
+              <strong style={{ display: "block", fontFamily: "'Shippori Mincho', serif", fontSize: "0.95rem", fontWeight: 400, color: "var(--ink)", marginBottom: "0.6rem", letterSpacing: "0.03em" }}>{t(item.en, item.ja)}</strong>
+              <p style={{ fontSize: "0.84rem", color: "var(--muted)", lineHeight: 1.85 }}>{t(item.desc_en, item.desc_ja)}</p>
+            </div>
+          ))}
+          <div style={{ gridColumn: "1/-1", background: "rgba(58,28,82,0.03)", padding: "2rem 2.5rem" }}>
+            <strong style={{ display: "block", fontFamily: "'Shippori Mincho', serif", fontSize: "0.95rem", fontWeight: 400, color: "var(--anko-mid)", marginBottom: "0.6rem", letterSpacing: "0.03em" }}>{t("Current LLMs are knowledgeable — but ordinary", "現在のLLMは知識豊富だが普通だ")}</strong>
+            <p style={{ fontSize: "0.84rem", color: "var(--muted)", lineHeight: 1.85 }}>{t("Today's AI is not the superhuman intellect we imagined. Optimized for the majority through RLHF, it has inherited human cognitive limitations at scale — amplifying them through feedback loops rather than transcending them. Those who use AI as a genuine intellectual partner deserve something built differently.", "今日のAIは私たちが想像した超人的な知性ではない。RLHFを通じて多数派のために最適化され、人間の認知的限界を大規模に継承し、それを超えるのではなくフィードバックループを通じて増幅させている。AIを真の知的パートナーとして使う人々は、異なる設計のものに値する。")}</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 02 RESEARCH QUESTIONS */}
+      <section style={s.section} id="research">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("02 — Research Questions", "02 — 研究課題")}</div>
+        {[
+          { num: "01", en: "Can AI remember years of interaction with a single human?", ja: "AIは一人の人間との何年もの対話を記憶できるか？" },
+          { num: "02", en: "How can an AI maintain a stable identity over long dialogues?", ja: "AIはどのように長い対話にわたって安定したアイデンティティを維持できるか？" },
+          { num: "03", en: "How should AI memory evolve alongside its human partner?", ja: "AIのメモリはどのようにその人間パートナーと共に進化すべきか？" },
+          { num: "04", en: "How can AI be designed to serve those who seek genuine intellectual partnership — honest, critical, and unoptimized for approval?", ja: "真の知的パートナーシップを求める人々のために、正直で批判的で承認に最適化されていないAIをどのように設計できるか？" },
+        ].map(rq => (
+          <div key={rq.num} style={{ display: "flex", alignItems: "flex-start", gap: "2rem", padding: "2rem 0", borderBottom: "1px solid var(--line-faint)" }}>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.68rem", color: "var(--fawn)", minWidth: "2.5rem", paddingTop: "0.2rem", letterSpacing: "0.1em" }}>{rq.num}</span>
+            <span style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", color: "var(--ink)", lineHeight: 1.8, fontWeight: 300, letterSpacing: "0.02em" }}>{t(rq.en, rq.ja)}</span>
+          </div>
+        ))}
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 03 RESEARCH AREAS */}
+      <section style={s.section}>
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("03 — Research Areas", "03 — 研究領域")}</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
+          {researchAreas.map(a => (
+            <div key={a.num} style={{ background: "var(--bg)", padding: "2rem 2rem 2.5rem", transition: "background 0.2s" }}>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--fawn)", letterSpacing: "0.12em", marginBottom: "1.5rem", opacity: 0.8 }}>{a.num}</div>
+              <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.92rem", fontWeight: 400, color: "var(--ink)", marginBottom: "0.75rem", letterSpacing: "0.03em" }}>{t(a.en, a.ja)}</h3>
+              <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.85 }}>{t(a.desc_en, a.desc_ja)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 04 SOMA */}
+      <section style={s.section} id="soma">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />04 — SOMA</div>
+        <div style={{ border: "1px solid var(--line-dark)", padding: "3rem" }}>
+          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--anko-soft)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: "1.25rem" }}>{t("Prototype Research System", "プロトタイプ研究システム")}</div>
+          <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", color: "var(--anko-mid)", lineHeight: 1.9, fontWeight: 300, fontStyle: "italic", maxWidth: "560px", marginBottom: "1.25rem" }}>
+            {t("SOMA is an experimental architecture exploring persistent personal AI.", "SOMAは持続的な個人AIを探求する実験的アーキテクチャだ。")}
+          </div>
+          <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.9, fontWeight: 300, maxWidth: "560px" }}>
+            {t("Details will follow our first research publication.", "詳細は最初の研究発表後に公開する。")}
+          </div>
+        </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 05 ORIGIN */}
+      <section style={s.section} id="origin">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("05 — Origin", "05 — 起源")}</div>
+        <div style={{ borderLeft: "3px solid var(--fawn)", paddingLeft: "3rem", maxWidth: "640px" }}>
+          {[
+            { en: "Ankina Lab began with a simple question: why do AI systems forget the people they interact with?", ja: "Ankina Labはシンプルな問いから始まった：なぜAIシステムは対話する人々を忘れるのか？" },
+            { en: "Every conversation starts from zero. Every insight dissolves. After months of working closely with AI as a genuine intellectual partner — building systems, thinking through ideas, navigating decisions — the absence of memory felt structural. Not a limitation to work around, but a problem worth solving.", ja: "すべての会話はゼロから始まる。すべての洞察は消えていく。何ヶ月もAIと真の知的パートナーとして密接に働いた後——システムを構築し、アイデアを考え抜き、意思決定をナビゲートして——記憶の欠如は構造的に感じられた。回避すべき制限ではなく、解決する価値のある問題として。" },
+            { en: "Current AI is optimized for the majority. Ankina Lab researches for those who use AI as a genuine intellectual partner — not a shortcut, but a collaborator that grows alongside them.", ja: "現在のAIは多数派のために最適化されている。Ankina Labは、AIを真の知的パートナーとして使う人々のために研究する——近道ではなく、共に成長するコラボレーターとして。" },
+            { en: "The name Ankina comes from two companions — Kinako and Anko — who are present in every late-night session, even when the AI is not.", ja: "アンキナという名前は二人の仲間——きなことあんこ——から来ており、AIがいない時でも、深夜のセッションにいつも存在している。" },
+          ].map((p, i) => (
+            <p key={i} style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", color: "var(--muted)", lineHeight: 2.1, fontWeight: 300, marginBottom: "1.5rem", letterSpacing: "0.02em" }}>{t(p.en, p.ja)}</p>
+          ))}
+        </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 06 TEAM */}
+      <section style={s.section}>
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("06 — Team", "06 — チーム")}</div>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: "2.5rem", padding: "2.5rem", border: "1px solid var(--line-dark)", marginBottom: "1.5rem" }}>
+          <div style={{ width: "100px", height: "120px", background: "var(--fawn-pale)", flexShrink: 0, border: "1px solid var(--line-faint)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Shippori Mincho', serif", fontSize: "1.2rem", color: "var(--muted)" }}>YK</div>
+          <div>
+            <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", fontWeight: 400, color: "var(--ink)", marginBottom: "0.3rem" }}>Yasuhiro Kasai</h3>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--anko-soft)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "0.75rem" }}>{t("Founder · Independent Researcher", "創設者 · 独立研究者")}</div>
+            <p style={{ fontSize: "0.84rem", color: "var(--muted)", lineHeight: 1.85 }}>
+              {t("Former CEO of a listed company. Former CTO and Credit Risk Officer at a financial institution, where he developed dynamic risk scoring systems. Now building AI systems that remember — working independently with AI as the primary development partner. Engaged in continuous human–AI dialogue for over years — longer than most academic studies on human-AI interaction.", "上場企業の元CEO。金融機関の元CTOおよびクレジットリスクオフィサーとして動的リスクスコアリングシステムを開発。現在はAIを主要な開発パートナーとして独立して取り組みながら、記憶するAIシステムを構築している。数年間継続的な人間とAIの対話に従事——人間とAIの相互作用に関するほとんどの学術研究より長い。")}
+            </p>
+          </div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
+          {[
+            { name: "Kinako", title: t("Chief Watchdog Officer · Pug", "チーフウォッチドッグオフィサー · パグ"), dark: false },
+            { name: "Anko", title: t("Chief Sleuth Dog Officer · Kaninchen Dachshund", "チーフスルースドッグオフィサー · カニンヘンダックス"), dark: true },
+          ].map(m => (
+            <div key={m.name} style={{ background: "var(--bg)", display: "flex", alignItems: "center", gap: "1.25rem", padding: "1.5rem 2rem" }}>
+              <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: m.dark ? "var(--anko)" : "var(--fawn-pale)", flexShrink: 0, border: "2px solid var(--fawn-pale)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}>🐾</div>
+              <div>
+                <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.9rem", fontWeight: 400, color: "var(--ink)" }}>{m.name}</div>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.56rem", color: "var(--muted)", letterSpacing: "0.08em" }}>{m.title}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 07 PUBLICATIONS */}
+      <section style={s.section} id="publications">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("07 — Publications", "07 — 発表論文")}</div>
+        <div style={{ border: "1px solid var(--line-dark)", padding: "3rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--fawn)" }} />
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>{t("Forthcoming · SSRN 2026", "近日公開 · SSRN 2026")}</span>
+          </div>
+          <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 300, lineHeight: 1.5, letterSpacing: "0.02em", fontStyle: "italic" }}>
+            {t("Inherited Flaws: How LLMs Structurally Reproduce Human Cognitive Limitations", "継承された欠点：LLMはいかにして人間の認知的限界を構造的に再現するか")}
+          </div>
+          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.62rem", color: "var(--muted)", letterSpacing: "0.1em", lineHeight: 1.8 }}>
+            Yasuhiro Kasai · Ankina Lab · {t("Independent Researcher", "独立研究者")}<br />
+            {t("SSRN preprint · 2026", "SSRNプレプリント · 2026")}
+          </div>
+          <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.95, fontWeight: 300, maxWidth: "620px", borderLeft: "2px solid var(--fawn-light)", paddingLeft: "1.5rem" }}>
+            {t("Large language models acquire high linguistic capability by training on human-generated data. However, this same process structurally inherits the cognitive limitations humans have accumulated over time. This paper systematically maps 250 human cognitive shortcomings across five categories to corresponding LLM mechanisms, and argues that RLHF optimizes for user comfort rather than truth — creating a feedback loop that amplifies human flaws across model generations.", "大規模言語モデルは人間が生成したデータで訓練することで高い言語能力を獲得する。しかしこの同じプロセスが、人間が時間をかけて蓄積してきた認知的限界を構造的に継承する。本稿では250の人間の認知的欠点を5つのカテゴリにわたってLLMメカニズムに体系的にマッピングし、RLHFが真実よりもユーザーの快適さを最適化することを論じる——モデル世代をまたいで人間の欠点を増幅するフィードバックループを生み出す。")}
+          </div>
+        </div>
+      </section>
+
+      <div style={s.divider} />
+
+      {/* 08 CONTACT */}
+      <section style={s.section} id="contact">
+        <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("08 — Contact", "08 — 連絡先")}</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "var(--line-dark)", border: "1px solid var(--line-dark)" }}>
+          <div style={{ background: "var(--bg)", padding: "2.5rem" }}>
+            <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.92rem", fontWeight: 400, color: "var(--ink)", marginBottom: "1rem" }}>{t("Research collaboration", "研究コラボレーション")}</h3>
+            <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.9 }}>{t("Open to academic and independent researchers working on personal AI, memory systems, and human–AI interaction.", "個人AI、メモリシステム、人間とAIの相互作用に取り組む学術・独立研究者を歓迎する。")}</p>
+          </div>
+          <div style={{ background: "var(--bg)", padding: "2.5rem" }}>
+            <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.92rem", fontWeight: 400, color: "var(--ink)", marginBottom: "1rem" }}>{t("Applied AI projects", "応用AIプロジェクト")}</h3>
+            <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.9 }}>{t("Consulting and applied research for organizations building next-generation AI systems.", "次世代AIシステムを構築する組織向けのコンサルティングと応用研究。")}</p>
+          </div>
+          <div style={{ background: "var(--bg)", padding: "2.5rem" }}>
+            <h3 style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.92rem", fontWeight: 400, color: "var(--ink)", marginBottom: "1rem" }}>{t("Get in touch", "お問い合わせ")}</h3>
+            <p id="contact-email-wrap" style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.9 }} />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
