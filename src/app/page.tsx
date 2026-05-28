@@ -140,8 +140,8 @@ export default function Home() {
               <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "var(--fawn)" }} />
             </div>
             <h1 style={{ ...s.h1 }}>
-              {t("Optimized for ", <span style={{fontSize:"0.65em"}}>真実ではなく、ユーザーからの高評価のために最適化されている。</span>)}
-              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("approval", "")}</em>
+              {t("Optimized for ", "真実ではなく、ユーザーからの高評価のために")}
+              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("approval", "最適化されている")}</em>
               {t(",", "")}
               <br />{t("not truth.", "")}
             </h1>
