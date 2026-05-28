@@ -4,17 +4,27 @@ import matter from "gray-matter";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog — Ankina Lab",
-  description: "Research notes, essays, and updates from Ankina Lab.",
-};
+interface Props {
+  params: Promise<{ lang: string }>;
+}
+
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "ja" }];
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === "ja" ? "ブログ — Ankina Lab" : "Blog — Ankina Lab",
+    description: lang === "ja" ? "Ankina Labの研究ノート。" : "Research notes from Ankina Lab.",
+  };
+}
 
 interface Post {
   slug: string;
   title: string;
   date: string;
   excerpt: string;
-  lang: string;
 }
 
 function getPosts(lang: string): Post[] {
@@ -25,12 +35,13 @@ function getPosts(lang: string): Post[] {
     .map((file) => {
       const raw = fs.readFileSync(path.join(contentDir, file), "utf-8");
       const { data } = matter(raw);
-      return { slug: file.replace(".md", ""), title: data.title || "", date: data.date || "", excerpt: data.excerpt || "", lang };
+      return { slug: file.replace(".md", ""), title: data.title || "", date: data.date || "", excerpt: data.excerpt || "" };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-function BlogList({ lang }: { lang: string }) {
+export default async function BlogLangIndex({ params }: Props) {
+  const { lang } = await params;
   const posts = getPosts(lang);
   const isJa = lang === "ja";
 
@@ -42,9 +53,9 @@ function BlogList({ lang }: { lang: string }) {
           {isJa ? "ブログ — 研究ノート" : "Blog — Research Notes"}
         </div>
         <div style={{ display: "flex", gap: "0.5rem", marginBottom: "3rem" }}>
-          {["en", "ja"].map((l) => (
-            <a key={l} href={l === "en" ? "/blog" : "/blog/ja"} style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.1em", padding: "0.2rem 0.6rem", border: "1px solid rgba(58,28,82,0.2)", color: lang === l ? "var(--bg)" : "var(--anko-mid)", background: lang === l ? "var(--anko-mid)" : "transparent", textDecoration: "none" }}>
-              {l === "en" ? "EN" : "日本語"}
+          {[{ l: "en", label: "EN", href: "/blog/en" }, { l: "ja", label: "日本語", href: "/blog/ja" }].map((item) => (
+            <a key={item.l} href={item.href} style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.1em", padding: "0.2rem 0.6rem", border: "1px solid rgba(58,28,82,0.2)", color: item.l === lang ? "var(--bg)" : "var(--anko-mid)", background: item.l === lang ? "var(--anko-mid)" : "transparent", textDecoration: "none" }}>
+              {item.label}
             </a>
           ))}
         </div>
@@ -70,8 +81,4 @@ function BlogList({ lang }: { lang: string }) {
       </section>
     </main>
   );
-}
-
-export default function BlogIndex() {
-  return <BlogList lang="en" />;
 }

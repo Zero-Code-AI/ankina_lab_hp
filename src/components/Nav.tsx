@@ -40,7 +40,7 @@ export default function Nav() {
           { href: "/#problem", label: t("Problem", "問題") },
           { href: "/#research", label: t("Research", "研究") },
           { href: "/#soma", label: "SOMA" },
-          { href: "/blog", label: "Blog" },
+          { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
           { href: "/#contact", label: t("Contact", "連絡先") },
         ].map((item) => (
           <a
