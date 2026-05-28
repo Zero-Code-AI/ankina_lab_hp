@@ -47,7 +47,7 @@ const s = {
 };
 
 export default function Home() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const researchAreas = [
     {
@@ -124,10 +124,15 @@ export default function Home() {
           <div>
             <h1 style={{ ...s.h1 }}>
               <span style={{ display: "block", fontSize: "0.38em", color: "var(--muted)", letterSpacing: "0.22em", marginBottom: "0.6rem", fontWeight: 300 }}>{t("Questions we must ask of AI", "AIへの問い")}</span>
-              {t("AI should ", "AIは、共に成長する人々を")}
-              <em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>{t("remember", "")}</em>
-              <br />{t("the people it", "")}
-              <br />{t("grows with.", "忘れてはならない。")}
+              {lang === "ja" ? (
+                "AIは、共に成長する人々を忘れてはならない。"
+              ) : (
+                <>
+                  {t("AI should ", "")}<em style={{ fontStyle: "italic", color: "var(--anko-mid)" }}>remember</em>
+                  <br />the people it
+                  <br />grows with.
+                </>
+              )}
             </h1>
             <p style={{ ...s.sub }}>
               {t(
