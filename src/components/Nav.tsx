@@ -1,8 +1,20 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { useLang } from "./LangContext";
 
 export default function Nav() {
   const { lang, setLang, t } = useLang();
+  const pathname = usePathname();
+
+  const handleLangSwitch = () => {
+    const newLang = lang === "en" ? "ja" : "en";
+    setLang(newLang);
+    if (pathname.startsWith("/blog/en")) {
+      window.location.href = pathname.replace("/blog/en", "/blog/ja");
+    } else if (pathname.startsWith("/blog/ja")) {
+      window.location.href = pathname.replace("/blog/ja", "/blog/en");
+    }
+  };
 
   return (
     <nav
@@ -61,7 +73,7 @@ export default function Nav() {
 
         {/* 言語切り替え */}
         <button
-          onClick={() => setLang(lang === "en" ? "ja" : "en")}
+          onClick={handleLangSwitch}
           style={{
             fontFamily: "'DM Mono', monospace",
             fontSize: "0.6rem",

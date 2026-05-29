@@ -52,13 +52,7 @@ export default async function BlogLangIndex({ params }: Props) {
           <div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />
           {isJa ? "ブログ — 研究ノート" : "Blog — Research Notes"}
         </div>
-        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "3rem" }}>
-          {[{ l: "en", label: "EN", href: "/blog/en" }, { l: "ja", label: "日本語", href: "/blog/ja" }].map((item) => (
-            <a key={item.l} href={item.href} style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.1em", padding: "0.2rem 0.6rem", border: "1px solid rgba(58,28,82,0.2)", color: item.l === lang ? "var(--bg)" : "var(--anko-mid)", background: item.l === lang ? "var(--anko-mid)" : "transparent", textDecoration: "none" }}>
-              {item.label}
-            </a>
-          ))}
-        </div>
+
         {posts.length === 0 ? (
           <div style={{ border: "1px solid var(--line-dark)", padding: "4rem 3rem", textAlign: "center" as const }}>
             <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1rem", color: "var(--muted)", lineHeight: 2 }}>{isJa ? "近日公開予定" : "First posts coming soon."}</p>
