@@ -184,12 +184,13 @@ export default function Home() {
           {/* SIDEBAR */}
           <div style={{ borderLeft: "1px solid var(--line-dark)", paddingLeft: "2.5rem", paddingTop: "0.5rem" }}>
             <div style={{ marginBottom: "2rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-                <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--anko-soft)", opacity: 0.5 }} />
-                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.56rem", color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>{t("Active Research", "")}</span>
-              </div>
+
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Researcher", "研究者")}</div>
               <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.95 }}>Yasuhiro Kasai<br />{t("Independent Researcher", "研究者")}</div>
+              <a href="https://x.com/Ankina_ai" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", marginTop: "0.6rem", textDecoration: "none", color: "var(--muted)" }}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.08em" }}>@Ankina_ai</span>
+              </a>
             </div>
             <div style={{ marginBottom: "2rem" }}>
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginBottom: "0.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid var(--line-faint)" }}>{t("Research Areas", "研究領域")}</div>
