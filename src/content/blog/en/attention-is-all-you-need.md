@@ -13,7 +13,7 @@ It could hold a conversation. Write an essay. Debug code. Explain philosophy.
 
 To most people, it felt like a sudden leap — as if AI had crossed some invisible line overnight.
 
-But ChatGPT was standing on the shoulders of a single paper, published five years earlier by a team of Google researchers.
+But ChatGPT was built on the foundation of a single paper, published five years earlier by a team of Google researchers.
 
 Its title was deliberately provocative:
 
@@ -127,7 +127,7 @@ Return to the earlier example:
 
 In an RNN, by the time the model reaches *it*, *animal* is fading. The connection between them has weakened across the distance.
 
-With Self-Attention, *it* looks directly at *animal* — regardless of how many words separate them. Distance disappears. The first word and the last word are equally accessible at any point.
+With Self-Attention, *it* looks directly at *animal* — regardless of how many words separate them. In effect, distance disappears. The first word and the last word are equally accessible at any point.
 
 This was the revolution.
 
@@ -143,7 +143,7 @@ It **scaled**. As models grew larger, performance kept improving — in ways tha
 
 Translation. Summarization. Conversation. Code generation. Reasoning.
 
-None of these capabilities were explicitly programmed. They emerged from training large Transformer models on large amounts of text. The architecture, it turned out, was the unlock.
+None of these capabilities were explicitly programmed. They emerged from training large Transformer models on large amounts of text. The architecture, it turned out, was the key.
 
 This is how the era of large language models began.
 
