@@ -328,3 +328,11 @@ Attentionが解いたのは「どこを見るか」という問題だった。
 ---
 
 *次回：なぜAIは「長い会話」が苦手なのか — コンテキストウィンドウと記憶の限界*
+
+---
+
+## 参考文献
+
+本記事は、Transformerアーキテクチャを世界に紹介した以下の論文をもとにしている。
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). **Attention Is All You Need**. *Advances in Neural Information Processing Systems*, 30. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
