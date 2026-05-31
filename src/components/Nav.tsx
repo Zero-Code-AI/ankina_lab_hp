@@ -16,6 +16,16 @@ export default function Nav() {
     }
   };
 
+  const navItems = [
+    { href: "/#research", label: t("Research", "研究") },
+    { href: "/library", label: "Library" },
+    { href: "/concepts", label: t("Concepts", "概念") },
+    { href: "/papers", label: t("Papers", "論文") },
+    { href: "/philosophy", label: t("Philosophy", "思想") },
+    { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
+    { href: "/#contact", label: t("Contact", "連絡先") },
+  ];
+
   return (
     <nav
       style={{
@@ -47,14 +57,8 @@ export default function Nav() {
         Ankina Lab
       </a>
 
-      <div style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
-        {[
-          { href: "/#problem", label: t("Problem", "問題") },
-          { href: "/#research", label: t("Research", "研究") },
-          { href: "/#soma", label: "SOMA" },
-          { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
-          { href: "/#contact", label: t("Contact", "連絡先") },
-        ].map((item) => (
+      <div style={{ display: "flex", gap: "1.6rem", alignItems: "center" }}>
+        {navItems.map((item) => (
           <a
             key={item.href}
             href={item.href}
@@ -65,13 +69,13 @@ export default function Nav() {
               textDecoration: "none",
               letterSpacing: "0.16em",
               textTransform: "uppercase",
+              whiteSpace: "nowrap",
             }}
           >
             {item.label}
           </a>
         ))}
 
-        {/* 言語切り替え */}
         <button
           onClick={handleLangSwitch}
           style={{
@@ -83,6 +87,7 @@ export default function Nav() {
             padding: "0.2rem 0.6rem",
             letterSpacing: "0.1em",
             cursor: "pointer",
+            whiteSpace: "nowrap",
           }}
         >
           {lang === "en" ? "日本語" : "EN"}
