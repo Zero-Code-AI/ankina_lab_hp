@@ -422,8 +422,14 @@ https://arxiv.org/abs/2303.11366
 
 ## Next Article
 
-If Reflexion gave AI the ability to reflect on its own failures, then **Generative Agents** demonstrated how memory can give rise to planning, self-reflection, and social behavior.
+If Reflexion gave AI the ability to reflect on its own failures, then an earlier paper called **ReAct** gave AI something equally important: the ability to act.
 
-Why did twenty-five simulated agents begin organizing parties, sharing information, forming relationships, and creating their own social lives inside a virtual town?
+Before ReAct, language models primarily answered questions.
 
-That question will take us to the next chapter in the evolution of AI agents.
+ReAct introduced a new loop: think, act, observe, and think again.
+
+That simple idea helped transform language models from passive chatbots into active agents.
+
+Why is ReAct often considered one of the starting points of today's AI agent revolution?
+
+In the next article, we will explore the paper that helped turn LLMs into agents.
