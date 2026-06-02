@@ -153,6 +153,24 @@ Question → Reason → Answer
 
 ReAct introduced an entirely new loop.
 
+```
+Question
+↓
+Thought
+↓
+Action
+↓
+Observation
+↓
+Thought
+↓
+Action
+↓
+Observation
+↓
+Answer
+```
+
 Think. Act. Observe. Think again.
 
 The structure closely resembles how humans solve problems.
@@ -169,25 +187,59 @@ It was a prompting structure.
 
 The model was encouraged to reason in the following format:
 
-Thought: What should I do first?
-Action: Perform an action
-Observation: Receive the result
+```
+Thought:
+What should I do first?
+
+Action:
+Perform an action
+
+Observation:
+Receive the result
+```
 
 Then, it would think again based on what it observed.
 
 For example, if asked: "What is the capital of the country where Christopher Nolan was born?" the process might look like this:
 
-Thought: First, I should look up Christopher Nolan.
-Action: Search[Christopher Nolan]
+```
+Thought:
+First, I should look up Christopher Nolan.
 
-Observation: Christopher Nolan was born in the United Kingdom.
+Action:
+Search[Christopher Nolan]
+```
 
-Thought: Now I should find the capital of the United Kingdom.
-Action: Search[United Kingdom]
+↓
 
-Observation: Capital: London
+```
+Observation:
+Christopher Nolan was born in the United Kingdom.
+```
 
-Answer: London
+↓
+
+```
+Thought:
+Now I should find the capital of the United Kingdom.
+
+Action:
+Search[United Kingdom]
+```
+
+↓
+
+```
+Observation:
+Capital: London
+```
+
+↓
+
+```
+Answer:
+London
+```
 
 Today this appears obvious. But at the time, it was revolutionary.
 
@@ -203,7 +255,23 @@ Claude Code. Cursor. OpenAI Agents. OpenHands. CrewAI. LangGraph. AutoGPT.
 
 The names and implementations differ. But if we examine them closely, most share the same fundamental loop.
 
-Goal → Think → Act → Observe → Think → Act → Observe → Goal Complete
+```
+Goal
+↓
+Think
+↓
+Act
+↓
+Observe
+↓
+Think
+↓
+Act
+↓
+Observe
+↓
+Goal Complete
+```
 
 This structure is precisely what ReAct demonstrated.
 
@@ -251,7 +319,7 @@ The results turned out to be far more significant than many expected.
 
 ---
 
-## HotpotQA - Connecting Multiple Pieces of Knowledge
+## HotpotQA — Connecting Multiple Pieces of Knowledge
 
 One of the most important evaluations was **HotpotQA**.
 
@@ -275,7 +343,7 @@ The reason was straightforward. It stopped guessing. Instead, it looked things u
 
 ---
 
-## FEVER - Fighting Hallucinations
+## FEVER — Fighting Hallucinations
 
 Another important benchmark was **FEVER**.
 
@@ -299,7 +367,7 @@ In many ways, this idea foreshadowed later developments such as retrieval-augmen
 
 ---
 
-## ALFWorld - Can AI Operate in an Environment?
+## ALFWorld — Can AI Operate in an Environment?
 
 One of the most fascinating aspects of the ReAct paper was that it extended beyond question answering.
 
@@ -333,7 +401,7 @@ ReAct demonstrated that language models could participate in this loop.
 
 ---
 
-## WebShop - Teaching AI to Shop Online
+## WebShop — Teaching AI to Shop Online
 
 Another particularly interesting benchmark was **WebShop**.
 
@@ -366,6 +434,8 @@ It was a conceptual shift.
 Before ReAct, intelligence was often viewed primarily as reasoning ability. Larger models. More parameters. More data. More sophisticated reasoning.
 
 ReAct introduced a different perspective.
+
+---
 
 **Intelligence is interaction with an environment.**
 
