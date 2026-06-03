@@ -2,6 +2,7 @@
 title: "Voyager — AIはなぜ「成長」し始めたのか？"
 date: "2026-06-03"
 excerpt: "ChatGPTは経験から学ばない。今日の会話の知識は、明日には消える。しかし2023年、NVIDIAの研究者たちはMinecraftの世界でそれを変えた。AIが自ら探索し、スキルを獲得し、成長し始めた。"
+tags: ["paper-review"]
 lang: "ja"
 ---
 

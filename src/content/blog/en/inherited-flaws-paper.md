@@ -2,6 +2,7 @@
 title: "Inherited Flaws: How LLMs Structurally Reproduce Human Cognitive Limitations"
 date: "2026-05-28"
 excerpt: "A forthcoming paper mapping 250 human cognitive shortcomings to corresponding LLM mechanisms — and arguing that RLHF optimizes for comfort, not truth."
+tags: ["paper-review", "research"]
 lang: "en"
 ---
 

@@ -2,6 +2,7 @@
 title: "Generative Agents — AIはどのように「人生」を持ち始めたのか？"
 date: "2026-05-31"
 excerpt: "もしAIに記憶を与えたら何が起こるか。2023年、Stanfordの研究者たちはこの問いを本気で実験した。記憶・内省・計画・社会行動——Generative Agentsは、AIが「継続的な知性」へ向かう最初の実証だった。"
+tags: ["paper-review"]
 lang: "ja"
 ---
 

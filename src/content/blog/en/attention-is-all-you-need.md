@@ -2,6 +2,7 @@
 title: "Attention Is All You Need — Why AI Suddenly Got So Good"
 date: "2026-05-29"
 excerpt: "In 2017, a team at Google made a provocative claim: you don't need memory, recursion, or complexity. You just need Attention. That idea became the foundation of every major AI system built since."
+tags: ["paper-review"]
 lang: "en"
 ---
 

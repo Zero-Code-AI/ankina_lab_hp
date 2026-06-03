@@ -2,6 +2,7 @@
 title: "Generative Agents — The Moment AI Started Living a Life of Its Own"
 date: "2026-05-31"
 excerpt: "What would happen if AI agents could remember yesterday? Not just facts — but experiences, people, conversations, and relationships. In 2023, Stanford researchers found out. The answer changed how we think about AI agents forever."
+tags: ["paper-review"]
 lang: "en"
 ---
 

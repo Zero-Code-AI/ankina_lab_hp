@@ -2,6 +2,7 @@
 title: "Voyager - Why Did AI Begin to Grow?"
 date: "2026-06-03"
 excerpt: "ChatGPT does not learn from experience. Knowledge from today's conversation disappears tomorrow. But in 2023, NVIDIA researchers changed that inside the Minecraft world. An AI began to explore on its own, acquire skills, and grow."
+tags: ["paper-review"]
 lang: "en"
 ---
 

@@ -2,6 +2,7 @@
 title: "Attention Is All You Need — なぜAIは突然賢くなったのか？"
 date: "2026-05-29"
 excerpt: "2017年、Googleの研究者たちは言った。「必要なのはAttentionだけだ」。その挑発的な論文が、ChatGPT、Claude、Geminiへと繋がるすべての始まりだった。"
+tags: ["paper-review"]
 lang: "ja"
 ---
 

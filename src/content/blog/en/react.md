@@ -2,6 +2,7 @@
 title: "ReAct - Why Did AI Begin to Act?"
 date: "2026-06-02"
 excerpt: "ChatGPT looked intelligent. But was it doing anything more than generating text? Researchers noticed a crucial gap: AI could answer questions, but it could not act on them. That limitation changed everything."
+tags: ["paper-review"]
 lang: "en"
 ---
 

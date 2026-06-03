@@ -2,6 +2,7 @@
 title: "Reflexion — What Happens When AI Learns to Reflect on Its Mistakes?"
 date: "2026-06-01"
 excerpt: "Language agents learned how to reason. They learned how to act. But they still struggled to learn from experience. Reflexion attempted to solve that problem through a surprisingly simple mechanism: self-reflection. And it actually worked."
+tags: ["paper-review"]
 lang: "en"
 ---
 

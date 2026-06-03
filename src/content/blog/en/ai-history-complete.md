@@ -2,6 +2,7 @@
 title: "The Long Road to LLMs: How a Translation Problem Accidentally Created the Modern AI Revolution"
 date: "2026-05-28"
 excerpt: "Researchers weren't trying to build ChatGPT. They were trying to fix machine translation. What happened next was an accident — and possibly the most consequential one in computing history."
+tags: ["paper-review"]
 lang: "en"
 ---
 

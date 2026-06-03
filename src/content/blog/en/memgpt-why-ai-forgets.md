@@ -2,6 +2,7 @@
 title: "MemGPT — Why Does AI Forget? The Paper That Tried to Give LLMs a Memory OS"
 date: "2026-05-30"
 excerpt: "AI is remarkably intelligent. Yet at the same time, it is surprisingly forgetful. MemGPT, published in 2023, attempted to give LLMs a memory hierarchy — the ability to remember, recall, and manage information over time."
+tags: ["paper-review"]
 lang: "en"
 ---
 
