@@ -364,14 +364,14 @@ export default function Home() {
         <div style={{ border: "1px solid var(--line-dark)", padding: "3rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
             <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--fawn)" }} />
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>{t("Forthcoming · SSRN 2026", "近日公開 · SSRN 2026")}</span>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>{t("Published · Zenodo 2026", "公開済み · Zenodo 2026")}</span>
           </div>
           <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 300, lineHeight: 1.5, letterSpacing: "0.02em", fontStyle: "italic" }}>
             {t("Inherited Flaws: How LLMs Structurally Reproduce Human Cognitive Limitations", "継承された欠点：LLMはいかにして人間の認知的限界を構造的に再現するか")}
           </div>
           <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.62rem", color: "var(--muted)", letterSpacing: "0.1em", lineHeight: 1.8 }}>
             Yasuhiro Kasai · Ankina Lab · {t("Independent Researcher", "研究者")}<br />
-            {t("SSRN preprint · 2026", "SSRNプレプリント · 2026")}
+            <a href="https://doi.org/10.5281/zenodo.20561515" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: "var(--anko-mid)", textDecoration: "none", borderBottom: "1px solid rgba(58,28,82,0.2)", paddingBottom: "1px" }}>10.5281/zenodo.20561515</a>
           </div>
           <div style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.95, fontWeight: 300, maxWidth: "620px", borderLeft: "2px solid var(--fawn-light)", paddingLeft: "1.5rem" }}>
             {t("Large language models acquire high linguistic capability by training on human-generated data. However, this same process structurally inherits the cognitive limitations humans have accumulated over time. This paper systematically maps 250 human cognitive shortcomings across five categories to corresponding LLM mechanisms, and argues that RLHF optimizes for user comfort rather than truth — creating a feedback loop that amplifies human flaws across model generations.", "大規模言語モデルは人間が生成したデータで訓練することで高い言語能力を獲得する。しかしこの同じプロセスが、人間が時間をかけて蓄積してきた認知的限界を構造的に継承する。本稿では250の人間の認知的欠点を5つのカテゴリにわたってLLMメカニズムに体系的にマッピングし、RLHFが真実よりもユーザーの快適さを最適化することを論じる——モデル世代をまたいで人間の欠点を増幅するフィードバックループを生み出す。")}
