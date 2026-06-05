@@ -3,16 +3,16 @@
 
 :root {
   --bg: #f7f4ef;
-  --ink: #1a1a1a;
-  --fawn: #c49858;
-  --fawn-light: #e8cca0;
-  --fawn-pale: #f0e4c8;
-  --anko: #1c0c2c;
-  --anko-mid: #3a1c52;
-  --anko-soft: #5a3472;
-  --muted: #8a7a60;
-  --line-dark: rgba(26, 26, 26, 0.12);
-  --line-faint: rgba(26, 26, 26, 0.06);
+  --ink: #1a1008;
+  --fawn: #c4956a;
+  --fawn-light: #e8d5c0;
+  --fawn-pale: #f0e6d8;
+  --anko: #3a1c52;
+  --anko-mid: #5c3d7a;
+  --anko-soft: #8b6aab;
+  --muted: #6b5c4e;
+  --line-dark: rgba(58,28,82,0.12);
+  --line-faint: rgba(58,28,82,0.06);
 }
 
 html {
