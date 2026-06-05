@@ -1,10 +1,12 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useLang } from "./LangContext";
+import { useState } from "react";
 
 export default function Nav() {
   const { lang, setLang, t } = useLang();
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLangSwitch = () => {
     const newLang = lang === "en" ? "ja" : "en";
@@ -16,78 +18,45 @@ export default function Nav() {
     }
   };
 
+  const navItems = [
+    { href: "/#problem", label: t("Problem", "課題") },
+    { href: "/#research", label: t("Research", "研究") },
+    { href: "/#soma", label: "SOMA" },
+    { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
+    { href: "/#contact", label: t("Contact", "連絡先") },
+  ];
+
   return (
-    <nav
-      style={{
-        position: "fixed",
-        top: "4px",
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "1.4rem 5rem 1.4rem 6.5rem",
-        background: "rgba(247,244,239,0.94)",
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid var(--line-faint)",
-      }}
-    >
-      <a
-        href="/"
-        style={{
-          fontFamily: "'Shippori Mincho', serif",
-          fontSize: "1.1rem",
-          color: "var(--ink)",
-          letterSpacing: "0.08em",
-          fontWeight: 400,
-          textDecoration: "none",
-        }}
-      >
-        Ankina Lab
-      </a>
-
-      <div style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
-        {[
-          { href: "/#problem", label: t("Problem", "課題") },
-          { href: "/#research", label: t("Research", "研究") },
-          { href: "/#soma", label: "SOMA" },
-          { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
-          { href: "/#contact", label: t("Contact", "連絡先") },
-        ].map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "0.6rem",
-              color: "var(--muted)",
-              textDecoration: "none",
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-            }}
-          >
-            {item.label}
-          </a>
-        ))}
-
-        <button
-          onClick={handleLangSwitch}
-          style={{
-            fontFamily: "'DM Mono', monospace",
-            fontSize: "0.6rem",
-            color: "var(--anko-mid)",
-            background: "transparent",
-            border: "1px solid rgba(58,28,82,0.2)",
-            padding: "0.2rem 0.6rem",
-            letterSpacing: "0.1em",
-            cursor: "pointer",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {lang === "en" ? "日本語" : "EN"}
-        </button>
+    <nav className="site-nav">
+      <div className="site-nav-bar">
+        <a href="/" className="site-nav-logo">Ankina Lab</a>
+        <div className="site-nav-right">
+          <div className="site-nav-links">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="site-nav-link">
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <button onClick={handleLangSwitch} className="site-nav-lang">
+            {lang === "en" ? "日本語" : "EN"}
+          </button>
+          <button className="site-nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+            <span style={{ transform: menuOpen ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
+            <span style={{ opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ transform: menuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none" }} />
+          </button>
+        </div>
       </div>
+      {menuOpen && (
+        <div className="site-nav-mobile">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="site-nav-mobile-link" onClick={() => setMenuOpen(false)}>
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
