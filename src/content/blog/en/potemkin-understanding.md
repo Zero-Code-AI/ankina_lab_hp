@@ -1,6 +1,6 @@
 ---
 title: "Potemkin Understanding — Do LLMs Really Understand?"
-date: "2026-06-08"
+date: "2026-06-07"
 excerpt: "Do AI systems genuinely understand, or do they merely appear to? From the Chinese Room and the grounding problem to humanity's own Illusion of Explanatory Depth, this article examines one of the deepest questions in AI research."
 lang: "en"
 tags: ["research", "opinion"]
