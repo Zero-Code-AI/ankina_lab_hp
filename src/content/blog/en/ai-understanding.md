@@ -1567,7 +1567,9 @@ And despite thousands of years of philosophy, psychology, and science, humanity 
 
 ---
 
-Yet there is another question hiding behind all of this.
+## What's Next
+
+There is another question hiding behind all of this.
 
 Throughout this article, we have discussed understanding. Grounding. Embodiment. Theory of Mind. World Models. Self Models.
 
