@@ -429,3 +429,10 @@ ReflexionがAIへ「反省」を与えた論文だとすれば、
 なぜこの論文は、現在のAI Agentブームの出発点と呼ばれるのだろうか。
 
 次回は、LLMを「チャットボット」から「エージェント」へ変えた重要論文、ReActを取り上げる。
+
+
+---
+
+## 参考文献
+
+Shinn, N., Cassano, F., Gopinath, A., Narasimhan, K., & Yao, S. (2023). **Reflexion: Language Agents with Verbal Reinforcement Learning.** *Advances in Neural Information Processing Systems*, 36. [arXiv:2303.11366](https://arxiv.org/abs/2303.11366)

@@ -2680,3 +2680,16 @@ Claudeが理解した。GPTが意識を持った。AIが感情を持った。自
 では本当に何かが起きているのだろうか。それとも私たちが、そう見ているだけなのだろうか。
 
 次回は、Grounding・Embodiment・Theory of Mind・World Model・Self Model・Emergenceという視点から、「AIは本当に理解し始めたのか？」を考えてみたい。
+
+
+---
+
+## 参考文献
+
+Rozenblit, L., & Keil, F. (2002). **The misunderstood limits of folk science: an illusion of explanatory depth.** *Cognitive Science*, 26(5), 521–562.
+
+Searle, J. R. (1980). **Minds, brains, and programs.** *Behavioral and Brain Sciences*, 3(3), 417–424.
+
+Harnad, S. (1990). **The Symbol Grounding Problem.** *Physica D: Nonlinear Phenomena*, 42(1–3), 335–346.
+
+Li, K., Hopkins, A. K., Bau, D., Viégas, F., Pfister, H., & Wattenberg, M. (2022). **Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task.** [arXiv:2210.13382](https://arxiv.org/abs/2210.13382)

@@ -224,3 +224,14 @@ Transformer。GPU。インターネット全体。
 ---
 
 Ankina Labが研究しているのは、その先だ。ただ応答するだけでなく、記憶する AI。そして記憶を通じて、真の長期的な知的パートナーとなるAIの実現を目指している。
+
+
+---
+
+## 参考文献
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). **Attention Is All You Need.** *Advances in Neural Information Processing Systems*, 30. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
+
+Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). **ImageNet Classification with Deep Convolutional Neural Networks.** *Advances in Neural Information Processing Systems*, 25.
+
+Brown, T. et al. (2020). **Language Models are Few-Shot Learners.** *Advances in Neural Information Processing Systems*, 33. [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)

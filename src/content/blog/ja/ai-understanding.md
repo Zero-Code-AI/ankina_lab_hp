@@ -837,3 +837,18 @@ Identity。Continuity。Memory。Persistent Agent。Personal AI。
 ---
 
 次回は、**「なぜAIには自己が存在しないのか？」**について考える。
+
+
+---
+
+## 参考文献
+
+Searle, J. R. (1980). **Minds, brains, and programs.** *Behavioral and Brain Sciences*, 3(3), 417–424.
+
+Harnad, S. (1990). **The Symbol Grounding Problem.** *Physica D: Nonlinear Phenomena*, 42(1–3), 335–346.
+
+Rozenblit, L., & Keil, F. (2002). **The misunderstood limits of folk science: an illusion of explanatory depth.** *Cognitive Science*, 26(5), 521–562.
+
+LeCun, Y. (2022). **A Path Towards Autonomous Machine Intelligence.** [openreview.net](https://openreview.net/pdf?id=BZ5a1r-kVsf)
+
+Li, K. et al. (2022). **Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task.** [arXiv:2210.13382](https://arxiv.org/abs/2210.13382)

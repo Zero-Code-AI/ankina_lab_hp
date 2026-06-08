@@ -485,3 +485,10 @@ Lost in the Middleが示したのは「**情報を保持することの難しさ
 つまり、Agentが本当に賢くなるためには両方が必要だった。必要な能力を取得すること。そして必要な情報を保持すること。
 
 その後のMemGPT、長期記憶研究、Dynamic Context Management、そしてPersonal AIの研究は、まさにこの問題に向き合うことになる。なぜAIは長い会話の途中で迷子になるのか。次回はその核心を見ていこう。
+
+
+---
+
+## 参考文献
+
+Schick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., & Scialom, T. (2023). **Toolformer: Language Models Can Teach Themselves to Use Tools.** *Advances in Neural Information Processing Systems*, 36. [arXiv:2302.04761](https://arxiv.org/abs/2302.04761)

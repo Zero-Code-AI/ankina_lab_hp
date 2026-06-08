@@ -489,3 +489,10 @@ ReActがAIへ「行動する能力」を与えた論文だとすれば、次に�
 Minecraftの世界で、自律的にスキルを獲得し続けるAIエージェント。
 
 なぜVoyagerは、同じタスクを繰り返しても飽きず、新しい目標へ向かい続けるのだろうか。
+
+
+---
+
+## 参考文献
+
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2022). **ReAct: Synergizing Reasoning and Acting in Language Models.** *International Conference on Learning Representations (ICLR) 2023*. [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)

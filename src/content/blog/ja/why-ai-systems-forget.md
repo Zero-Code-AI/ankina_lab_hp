@@ -37,3 +37,12 @@ AIシステムがステートレスであり続けるなら、ツールであり
 AIシステムが記憶できるなら、それは別の何かになれる。真の長期的な知的パートナー。今この瞬間だけでなく、時間を越えてあなたを理解するシステムだ。
 
 私たちはそれを構築する価値があると信じている。
+
+
+---
+
+## 参考文献
+
+Vaswani, A. et al. (2017). **Attention Is All You Need.** *Advances in Neural Information Processing Systems*, 30. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
+
+Packer, C. et al. (2023). **MemGPT: Towards LLMs as Operating Systems.** [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
