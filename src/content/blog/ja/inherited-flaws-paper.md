@@ -2,7 +2,7 @@
 title: "Inherited Flaws — LLMはなぜ人間の認知的限界を構造的に再現するのか"
 date: "2026-05-28"
 excerpt: "人間の347の認知的欠点をLLMのメカニズムに対応づけた論文。RLHFは真実ではなく快適さを最適化する——その構造的問題をZenodoで公開。"
-tags: ["paper-review"]
+tags: ["my-research"]
 lang: "ja"
 ---
 
