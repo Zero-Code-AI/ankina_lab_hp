@@ -767,3 +767,10 @@ But do they actually understand?
 Or do they merely appear to understand?
 
 In the next article, we will explore this question through the concept of Potemkin Understanding.
+
+
+---
+
+## Acknowledgement
+
+Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2023). **Lost in the Middle: How Language Models Use Long Contexts.** *Transactions of the Association for Computational Linguistics*, 12. [arXiv:2307.03172](https://arxiv.org/abs/2307.03172)

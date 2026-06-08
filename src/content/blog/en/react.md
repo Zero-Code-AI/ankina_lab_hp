@@ -619,3 +619,10 @@ Voyager accumulated experiences as reusable skills, expanded its capabilities ov
 Why is this research often considered one of the foundations of long-horizon AI agents?
 
 In the next article, we will explore **Voyager**, the paper that gave AI the ability to grow through experience.
+
+
+---
+
+## Acknowledgement
+
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2022). **ReAct: Synergizing Reasoning and Acting in Language Models.** *International Conference on Learning Representations (ICLR) 2023*. [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)

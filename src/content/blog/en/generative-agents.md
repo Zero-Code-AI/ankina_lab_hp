@@ -250,3 +250,10 @@ If Generative Agents taught AI how to remember, Reflexion taught AI how to learn
 ## Paper Information
 
 Park, J. S., O'Brien, J., Cai, C., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). **Generative Agents: Interactive Simulacra of Human Behavior**. UIST. [https://arxiv.org/abs/2304.03442](https://arxiv.org/abs/2304.03442)
+
+
+---
+
+## Acknowledgement
+
+Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). **Generative Agents: Interactive Simulacra of Human Behavior.** *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST 2023)*. [arXiv:2304.03442](https://arxiv.org/abs/2304.03442)

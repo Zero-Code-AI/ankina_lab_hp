@@ -434,3 +434,10 @@ That simple idea helped transform language models from passive chatbots into act
 Why is ReAct often considered one of the starting points of today's AI agent revolution?
 
 In the next article, we will explore the paper that helped turn LLMs into agents.
+
+
+---
+
+## Acknowledgement
+
+Shinn, N., Cassano, F., Gopinath, A., Narasimhan, K., & Yao, S. (2023). **Reflexion: Language Agents with Verbal Reinforcement Learning.** *Advances in Neural Information Processing Systems*, 36. [arXiv:2303.11366](https://arxiv.org/abs/2303.11366)

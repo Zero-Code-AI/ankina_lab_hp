@@ -491,3 +491,10 @@ Lost in the Middle addressed **how difficult it is to hold information**: even w
 For an agent to become genuinely capable, both are necessary. Accessing the right capability. And retaining the right information.
 
 The subsequent work on MemGPT, long-term memory research, Dynamic Context Management, and personal AI all confronted this problem directly. Why does AI lose its way in the middle of a long conversation? That is the question we will explore next.
+
+
+---
+
+## Acknowledgement
+
+Schick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., & Scialom, T. (2023). **Toolformer: Language Models Can Teach Themselves to Use Tools.** *Advances in Neural Information Processing Systems*, 36. [arXiv:2302.04761](https://arxiv.org/abs/2302.04761)
