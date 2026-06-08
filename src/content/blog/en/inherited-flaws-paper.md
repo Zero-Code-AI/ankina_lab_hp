@@ -1,12 +1,12 @@
 ---
 title: "Inherited Flaws: How LLMs Structurally Reproduce Human Cognitive Limitations"
 date: "2026-05-28"
-excerpt: "A forthcoming paper mapping 250 human cognitive shortcomings to corresponding LLM mechanisms — and arguing that RLHF optimizes for comfort, not truth."
+excerpt: "A paper mapping 347 human cognitive shortcomings to corresponding LLM mechanisms — and arguing that RLHF optimizes for comfort, not truth. Published on Zenodo."
 tags: ["paper-review"]
 lang: "en"
 ---
 
-This paper is currently under review and will be published on SSRN in 2026.
+This paper is now published on Zenodo. DOI: [10.5281/zenodo.20561515](https://doi.org/10.5281/zenodo.20561515)
 
 ## Abstract
 
@@ -32,4 +32,4 @@ As LLM outputs become training data for future models, inherited flaws are not d
 
 For business use and edge AI applications, this creates a structural ceiling on reliability. For users who need honest third-party analysis, the current architecture is fundamentally insufficient.
 
-*Full paper forthcoming on SSRN · 2026*
+*Published on Zenodo · June 2026 · DOI: [10.5281/zenodo.20561515](https://doi.org/10.5281/zenodo.20561515)*
