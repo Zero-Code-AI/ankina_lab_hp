@@ -5,6 +5,9 @@ import type { Post } from "./page";
 
 const TAG_LABELS: Record<string, { en: string; ja: string }> = {
   "paper-review": { en: "Paper Review", ja: "論文解説" },
+  "explainer":    { en: "Explainer",    ja: "解説" },
+  "history":      { en: "History",      ja: "AI史" },
+  "my-research":  { en: "My Research",  ja: "拙稿" },
   "opinion":      { en: "Opinion",      ja: "オピニオン" },
   "research":     { en: "Research",     ja: "研究" },
 };
