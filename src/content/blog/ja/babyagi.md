@@ -3,7 +3,7 @@ title: "BabyAGI — AIは自分で仕事を管理できるのか？自律的タ�
 date: "2026-06-04"
 excerpt: "2023年、数百行のコードで書かれた小さな実験が、AI業界を揺るがした。BabyAGIは「会話するAI」から「仕事を管理するAI」への転換点だった。その設計、限界、そして現代Agentへの影響を一本にまとめる。"
 lang: "ja"
-tags: ["paper-review", "research"]
+tags: ["paper-review"]
 ---
 
 2023年。

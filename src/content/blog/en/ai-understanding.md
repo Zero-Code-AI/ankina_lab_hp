@@ -3,7 +3,7 @@ title: "Has AI Really Started to Understand? — Grounding, Embodiment, Theory o
 date: "2026-06-08"
 excerpt: "Has AI begun to understand? Before answering, we need to examine what understanding actually means. From Socrates to the Chinese Room, from Grounding to World Models, this article explores the question from six different angles."
 lang: "en"
-tags: ["research", "opinion"]
+tags: ["explainer"]
 ---
 
 

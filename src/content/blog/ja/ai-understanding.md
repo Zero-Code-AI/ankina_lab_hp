@@ -3,7 +3,7 @@ title: "AIは本当に理解し始めたのか？ — Grounding・Embodiment・T
 date: "2026-06-08"
 excerpt: "AIは理解しているのか、していないのか。この問いに答える前に、まず確認すべきことがある。私たちは「理解」という言葉の意味をほとんど定義していない。6つの視点から、この問いを根本から問い直す。"
 lang: "ja"
-tags: ["research", "opinion"]
+tags: ["explainer"]
 ---
 
 

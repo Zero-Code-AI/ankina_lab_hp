@@ -3,7 +3,7 @@ title: "Potemkin Understanding — LLMは本当に「理解」しているのか
 date: "2026-06-07"
 excerpt: "ChatGPTは理解しているのか、それとも理解しているように見えるだけなのか。中国語の部屋、Grounding問題、そして人間自身のIllusion of Explanatory Depthから、この問いを考える。"
 lang: "ja"
-tags: ["research", "opinion"]
+tags: ["explainer"]
 ---
 
 

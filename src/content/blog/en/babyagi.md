@@ -3,7 +3,7 @@ title: "BabyAGI — Can AI Manage Its Own Work? The Small Experiment That Starte
 date: "2026-06-04"
 excerpt: "In 2023, a few hundred lines of code changed how the world thought about AI. BabyAGI didn't just act — it managed. Here is the complete story of its design, its failures, and why it became a turning point in the history of AI Agents."
 lang: "en"
-tags: ["paper-review", "research"]
+tags: ["paper-review"]
 ---
 
 In 2023, the AI industry was in the middle of an unprecedented wave of excitement.
