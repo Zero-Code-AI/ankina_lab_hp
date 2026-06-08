@@ -2,7 +2,7 @@
 title: "Why AI Systems Forget — And Why It Matters"
 date: "2026-04-07"
 excerpt: "Every conversation with an AI starts from zero. This is not a bug — it is a structural feature. And it has profound implications for how we think about AI as a long-term partner."
-tags: ["explainer"]
+tags: ["paper-review"]
 lang: "en"
 ---
 
