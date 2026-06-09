@@ -9,7 +9,6 @@ const TAG_LABELS: Record<string, { en: string; ja: string }> = {
   "history":      { en: "History",      ja: "AI史" },
   "my-research":  { en: "My Research",  ja: "拙稿" },
   "opinion":      { en: "Opinion",      ja: "オピニオン" },
-  "opinion":      { en: "Opinion",      ja: "オピニオン" },
   "research":     { en: "Research",     ja: "研究" },
 };
 
