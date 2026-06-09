@@ -23,6 +23,8 @@ export default function Nav() {
     { href: "/#research", label: t("Research", "研究") },
     { href: "/#soma", label: "SOMA" },
     { href: lang === "ja" ? "/blog/ja" : "/blog/en", label: "Blog" },
+    { href: "/#team", label: t("Team", "チーム") },
+    { href: "/#publications", label: t("Publications", "論文") },
     { href: "/#contact", label: t("Contact", "連絡先") },
   ];
 

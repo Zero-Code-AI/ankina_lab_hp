@@ -328,7 +328,7 @@ export default function Home() {
       <div style={s.divider} />
 
       {/* 06 TEAM */}
-      <section style={s.section}>
+      <section style={s.section} id="team">
         <div style={s.label}><div style={{ width: "24px", height: "1px", background: "var(--muted)", opacity: 0.5 }} />{t("06 — Team", "06 — チーム")}</div>
         <div style={{ display: "flex", alignItems: "flex-start", gap: "2.5rem", padding: "2.5rem", border: "1px solid var(--line-dark)", marginBottom: "1.5rem" }}>
           <img src="/kasai.jpg" alt="Yasuhiro Kasai" style={{ width: "100px", height: "120px", objectFit: "cover", objectPosition: "center top", flexShrink: 0, border: "1px solid var(--line-faint)" }} />
