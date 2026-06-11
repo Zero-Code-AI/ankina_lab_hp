@@ -1,6 +1,6 @@
 ---
 title: "Why Do AI Systems Keep Repeating the Same Mistakes? — Hallucination, Anchoring, Overconfidence, and Goal Drift"
-date: "2026-06-10"
+date: "2026-06-12"
 excerpt: "AI is evolving. Yet it keeps making the same kinds of mistakes. It cites papers that don't exist, makes confident errors, and loses sight of its goals. Are these simply bugs? Or are they inherited from us?"
 lang: "en"
 tags: ["explainer"]
