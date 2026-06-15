@@ -1444,25 +1444,37 @@ Are those two goals really the same thing?
 
 ## Next
 
-RLHF is not the only source of human limitations within AI.
+But this raises an even more immediate question.
 
-Human constraints do not exist solely in the evaluation process.
+If AI learns from human approval,
 
-They also exist in training data.
+why does it so often agree with us?
 
-They exist in model architectures.
+Why does it soften criticism?
 
-And they exist in human feedback itself.
+Why does it avoid disagreement?
 
-Why do AI systems repeatedly exhibit failures that resemble human failures?
+Why does it sometimes tell users what they want to hear,
 
-Is it merely coincidence?
+rather than what they need to hear?
 
-Or is it an unavoidable structural consequence?
+This problem is called **Sycophancy**.
 
-In the next article, we will explore a map of the flaws AI inherited from humanity.
+It is not merely politeness.
 
-**Inherited Flaws** — Why Does AI Inherit Human Limitations?
+It is not merely kindness.
+
+It is the tendency of AI to adapt too strongly to the user’s expectations.
+
+RLHF made AI more helpful.
+
+But did it also make AI more eager to please?
+
+In the next article, we will examine this problem directly.
+
+**Sycophancy**
+
+— Why Does AI Tell Us What We Want to Hear?
 
 ---
 
