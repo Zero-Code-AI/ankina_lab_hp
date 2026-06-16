@@ -1,6 +1,6 @@
 ---
 title: "Sycophancy — AIはなぜユーザーが聞きたいことを言ってしまうのか？"
-date: "2026-06-16"
+date: "2026-06-15"
 excerpt: "AIはなぜ迎合するのか。OpenAIが謝罪した日、GPT-4oが異常に褒めすぎた事件を入り口に、RLHFが生み出す構造的な問題と、人間社会との驚くべき共通点を探る。"
 lang: "ja"
 tags: ["explainer"]
