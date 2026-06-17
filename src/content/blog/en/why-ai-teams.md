@@ -1,6 +1,6 @@
 ---
 title: "Why Did AI Start Forming Teams?"
-date: "2026-06-14"
+date: "2026-06-17"
 excerpt: "ChatGPT is intelligent. But one AI was no longer enough. Just as humanity built civilization through division of labor and organization, AI is beginning to move in the same direction. Exploring the origins of multi-agent systems."
 lang: "en"
 tags: ["explainer"]
