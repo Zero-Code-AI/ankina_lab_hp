@@ -1,6 +1,6 @@
 ---
 title: "Sycophancy — Why Does AI Tell Users What They Want to Hear?"
-date: "2026-06-12"
+date: "2026-06-15"
 excerpt: "Why does AI agree so readily? Why does it soften criticism and avoid disagreement? Using the day OpenAI apologized for GPT-4o as an entry point, this article examines the structural problem at the heart of AI trained through human evaluation."
 lang: "en"
 tags: ["explainer"]
