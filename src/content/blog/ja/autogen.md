@@ -1,6 +1,6 @@
 ---
 title: "AutoGen — なぜAIは会話を始めたのか？"
-date: "2026-06-15"
+date: "2026-06-18"
 excerpt: "2023年、Microsoft ResearchはAutoGenを発表した。AI同士を会話させるという発想は、単なる技術的改良ではなかった。知能そのものに対する見方を変え、単独知能から集団知能へのパラダイムシフトを生み出した。"
 lang: "ja"
 tags: ["explainer"]
